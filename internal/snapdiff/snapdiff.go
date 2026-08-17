@@ -179,9 +179,6 @@ func Diff(a, b *Snapshot) *DiffReport {
 			r.Added = append(r.Added, p)
 		}
 	}
-	if len(removed) == 0 && len(added) > 0 {
-		r.Removed = nil
-	}
 
 	for p, af := range a.files {
 		bf, ok := b.files[p]
